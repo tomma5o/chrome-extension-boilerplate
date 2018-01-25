@@ -1,0 +1,4 @@
+node_modules/
+*.zip
+app/css
+app/index.js

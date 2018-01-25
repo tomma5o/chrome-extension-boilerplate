@@ -1,0 +1,37 @@
+
+{
+    "manifest_version": 2,
+  
+    "name": "easyDeployer",
+    "description": "Simple extension for make deploy easy",
+    "version": "1.0.0",
+    "icons": {
+      "16":  "assets/flash-16.png",
+      "48":  "assets/flash-48.png",
+      "128": "assets/flash-128.png"
+    },
+    
+    "browser_action": {
+      "default_icon": "assets/flash.png",
+      "default_popup": "popup.html",
+      "default_title": "speedUP"
+    },
+
+    "permissions": [
+      "clipboardWrite",
+      "activeTab",
+      "cookies",
+      "tabs",
+      "http://*/",
+      "https://*/"
+    ],
+
+    "content_scripts": [
+      {
+        "run_at" :"document_end",
+        "matches": ["<all_urls>"],
+        "js": ["index.js"]
+      }
+    ]
+  }
+  
