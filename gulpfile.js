@@ -1,10 +1,8 @@
 const gulp = require('gulp');
 const gulpSass = require('gulp-sass');
-const babel = require('gulp-babel');
 const zip = require('gulp-zip');
 const bump = require('gulp-bump');
 var webpack = require('gulp-webpack');
-var named = require('vinyl-named');
 var webpack4 = require('webpack')
 
 gulp.task('sass', function() {
@@ -47,3 +45,7 @@ gulp.task('zip', () =>
 
 gulp.task('build:prod', [ 'js', 'sass', 'bump:package', 'bump:manifest', 'zip']);
 gulp.task('build', [ 'js', 'sass' ]);
+gulp.task('watch', function (){
+    gulp.watch('src/sass/**/*.scss', ['sass']);
+    gulp.watch('src/script/**/*.js', ['js']);
+  })

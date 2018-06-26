@@ -1,11 +1,13 @@
 module.exports = {
 
     entry: {
-        index: './src/script/index.js',
+        extension: './src/script/extension/index.js',
+        spa: './src/script/spa/index.js'
     },
     output: {
-        filename: './index.js'
+        filename: './[name]/index.js',
     },
+    devtool: 'source-map',
     module: {
         rules: [
             {
@@ -13,9 +15,6 @@ module.exports = {
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
-                    options: {
-                        presets: ['env'],
-                    },
                 },
             },
         ],
