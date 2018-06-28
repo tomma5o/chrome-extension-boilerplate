@@ -27,7 +27,7 @@
       "run_at" :"document_end",
       "matches": ["*://*.octopus3.yoox.net/*"],
       "js": ["extension/index.js"],
-      "css": ["extension/style.css"]
+      "css": ["extension/test.css"]
     }
   ]
 }

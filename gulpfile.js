@@ -6,9 +6,9 @@ var webpack = require('gulp-webpack');
 var webpack4 = require('webpack')
 
 gulp.task('sass', function() {
-    return gulp.src('./src/sass/*.scss')
+    return gulp.src('./src/sass/*/**.scss')
     .pipe(gulpSass())
-    .pipe(gulp.dest('app/css'))
+    .pipe(gulp.dest('app/'))
 });
 
 gulp.task('js', function() {
