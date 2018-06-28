@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Extension name",
+  "name": "ExtensionName",
   "description": "Extension Description",
   "version": "1.0.0",
   "permissions": [
@@ -25,9 +25,9 @@
   "content_scripts": [
     {
       "run_at" :"document_end",
-      "matches": "urlHere",
+      "matches": ["*://*.octopus3.yoox.net/*"],
       "js": ["extension/index.js"],
-      "css": [ "siimple.min.css","extension/style.css"]
+      "css": ["extension/style.css"]
     }
   ]
 }
